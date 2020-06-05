@@ -1,0 +1,73 @@
+/* Front End Mentor Styling for Footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* General Styles */
+html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+
+h3{
+    margin: 0;
+}
+/* Header Values */
+header {
+    text-align: center;
+}
+
+header h2{
+    margin: 0;
+}
+
+header #first-h2{
+    font-weight: 200;
+}
+
+header #second-h2{
+    font-weight: 600;
+}
+
+header p{
+    color:  hsl(229, 6%, 66%);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Box Values */
+
+.box{
+    background-color: white;
+    padding: 20px;  
+    margin-bottom: 30px;
+    height: 150px;
+    font-size: 15px;
+    color: hsl(234, 12%, 34%);
+    border-radius: 4px;
+    box-shadow: 0px 10px 10px 8px rgba(0,0,0,0.07);
+}
+
+.box1{
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+
+.box2{
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+.box3{
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.box4{
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+
+
+
+
+
