@@ -4,16 +4,17 @@
 
 /* General Styles */
 html {
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 40px 20px;
     background-color: hsl(0, 0%, 98%);
+    width: 100vw;
 }
 
-
-h3{
-    margin: 0;
+body{
+    margin: 0 auto;
+    width: 90vw;
 }
+
 /* Header Values */
 header {
     text-align: center;
@@ -36,18 +37,35 @@ header p{
     text-align: center;
     margin-bottom: 60px;
 }
+ 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid red 1px;
+}
+
 
 /* Box Values */
 
 .box{
     background-color: white;
-    padding: 20px;  
-    margin-bottom: 30px;
-    height: 150px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
     font-size: 15px;
     color: hsl(234, 12%, 34%);
     border-radius: 4px;
     box-shadow: 0px 10px 10px 8px rgba(0,0,0,0.07);
+
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.box img{
+    align-self: flex-end;
+    
 }
 
 .box1{
@@ -67,7 +85,39 @@ header p{
 }
 
 
+/* 700px and up */
+@media(min-width: 650px){
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    
+}
 
 
+/* 1000px and up */
+@media(min-width: 1000px){
+    main{
+        
+    }
+
+    .box1{
+        
+    }
+    
+    .box2{
+  
+    }
+    
+    .box3{
+       
+    }
+    
+    .box4{
+
+    }
+    
+}
 
 
