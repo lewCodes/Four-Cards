@@ -35,14 +35,15 @@ header #second-h2{
 header p{
     color:  hsl(229, 6%, 66%);
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
  
 main{
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: solid red 1px;
+    border: solid red 3px;
 }
 
 
@@ -57,7 +58,6 @@ main{
     color: hsl(234, 12%, 34%);
     border-radius: 4px;
     box-shadow: 0px 10px 10px 8px rgba(0,0,0,0.07);
-
    
     display: flex;
     flex-direction: column;
@@ -90,32 +90,41 @@ main{
     main{
         flex-direction: row;
         flex-wrap: wrap;
-        
+        max-width: 800px;
     }
     
 }
 
 
 /* 1000px and up */
-@media(min-width: 1000px){
+@media(min-width: 1135px){
     main{
+        flex-direction: column;
         
     }
 
+    .box{
+            
+
+    }
+    
+
     .box1{
+        
         
     }
     
     .box2{
-  
+
     }
     
     .box3{
-       
+        
     }
     
     .box4{
-
+       
+        
     }
     
 }
