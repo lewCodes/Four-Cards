@@ -6,17 +6,11 @@
 html {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background-color: hsl(0, 0%, 98%);
-    width: 100vw;
-}
-
-body{
-    margin: 0 auto;
-    width: 90vw;
 }
 
 /* Header Values */
 header {
+    margin-top: 45px;
     text-align: center;
 }
 
@@ -37,22 +31,24 @@ header p{
     text-align: center;
     margin-bottom: 10px;
 }
- 
-main{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: solid red 3px;
-}
 
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    "box1 box2 box4"
+    ". box3 .";
+    justify-items: center;
+    grid-template-columns: 1fr auto 1fr;
+}
 
 /* Box Values */
 
 .box{
     background-color: white;
     padding: 20px;
-    margin: 20px auto;
+    margin: 15px 15px;
     width: 300px;
     font-size: 15px;
     color: hsl(234, 12%, 34%);
@@ -69,64 +65,58 @@ main{
 }
 
 .box1{
+    grid-area: box1;
+    transform: translateY(50%);
+    justify-self: end;
     border-top: 3px solid hsl(180, 62%, 55%);
 }
 
 .box2{
+    grid-area: box2;
     border-top: 3px solid hsl(0, 78%, 62%);
 }
 
 .box3{
+    grid-area: box3;
     border-top: 3px solid hsl(34, 97%, 64%);
 }
 
 .box4{
+    grid-area: box4;
+    transform: translateY(50%);
+    justify-self: start;
     border-top: 3px solid hsl(212, 86%, 64%);
+
 }
 
-
-/* 700px and up */
-@media(min-width: 650px){
+/* Media Queries */
+@media screen and (max-width: 1160px){
     main{
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-width: 800px;
+    grid-template-areas:
+    "box1 box2"
+    "box3 box4";
+
+    grid-template-columns: repeat(2, 1fr);
     }
-    
-}
-
-
-/* 1000px and up */
-@media(min-width: 1135px){
-    main{
-        flex-direction: column;
-        
-    }
-
-    .box{
-            
-
-    }
-    
 
     .box1{
-        
-        
+        transform: translateY(0%);
+        justify-self: auto;
     }
-    
-    .box2{
-
-    }
-    
-    .box3{
-        
-    }
-    
     .box4{
-       
-        
+        transform: translateY(0%);
+        justify-self: auto;
     }
-    
 }
 
-
+@media screen and (max-width: 760px){
+    main{
+        grid-template-areas: 
+        "box1"
+        "box2"
+        "box3"
+        "box4";
+        
+        grid-template-columns: 1fr;
+    }
+}
